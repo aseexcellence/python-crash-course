@@ -29,7 +29,7 @@ print(message)
 file_name = "    python_notes.txt    "
 print(f"The file name is: {file_name.strip().removesuffix('.txt')}")
 
-quote = 'Albert Eintein once said, "A person who never made a mistake never tried anything new.'
+quote = 'Albert Einstein once said, "A person who never made a mistake never tried anything new.'
 
 print(quote)
 
@@ -41,10 +41,14 @@ quote[1] = 'Tyson'
 quote = " ".join(quote)
 print(quote)
 
-# removing an item by its value
+# popping by index and removing an item by its value
 quote = quote.split(" ")
+name = quote.pop(0)
+print(f"\nI don't think {name} said that.")
+name += " " + quote.pop(0)
+print(f"So we need to remove {name}'s name from the quote.")
+
+name = quote.insert(0, 'Albert Einstein')
+quote = " ".join(quote)
 print(quote)
-name = quote.remove('new.')
-print(name)
-print(f"\nI don't think {quote.remove('Mike')} said that.")
 
