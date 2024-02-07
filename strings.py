@@ -41,3 +41,10 @@ quote[1] = 'Tyson'
 quote = " ".join(quote)
 print(quote)
 
+# removing an item by its value
+quote = quote.split(" ")
+print(quote)
+name = quote.remove('new.')
+print(name)
+print(f"\nI don't think {quote.remove('Mike')} said that.")
+
